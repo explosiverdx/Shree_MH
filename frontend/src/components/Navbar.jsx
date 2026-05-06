@@ -23,10 +23,11 @@ export default function Navbar() {
       <div className="header-shell">
         <Link className="brand" to="/">
           <span className="brand-mark">
-            <span className="brand-cross">+</span>
+            <img className="brand-logo" src={hospital.logo} alt={`${hospital.name} logo`} />
           </span>
           <span className="brand-copy">
             <strong>{hospital.shortName}</strong>
+            <span className="brand-mobile-name">{hospital.name}</span>
             <em>{hospital.speciality}</em>
           </span>
         </Link>
@@ -58,11 +59,11 @@ export default function Navbar() {
           ) : (
             <Link className="nav-action" to="/login">{t("patientLogin")}</Link>
           )}
-          <Link className="appointment-cta" to="/appointment">
-            {t("bookAppointment")} <ArrowUpRight size={17} />
+          <Link className="appointment-cta" to={user?.role === "admin" ? "/admin" : "/appointment"}>
+            {user?.role === "admin" ? t("adminDashboard") : t("bookAppointment")} <ArrowUpRight size={17} />
           </Link>
         </div>
       </div>
     </header>
   );
-}
+}/*  */

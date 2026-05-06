@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Plus } from "lucide-react";
+﻿import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { hospital } from "../config/site.js";
 import { useLanguage } from "../context/LanguageContext.jsx";
@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-brand">
         <span className="footer-mark" aria-hidden="true">
-          <Plus size={24} strokeWidth={3} />
+          <img className="footer-logo" src={hospital.logo} alt="" />
         </span>
         <h3>{hospital.name}</h3>
         <strong>{t("footerTagline")}</strong>
@@ -21,8 +21,8 @@ export default function Footer() {
         <div className="footer-links">
           <Link to="/departments">{t("departments")}</Link>
           <Link to="/doctors">{t("doctors")}</Link>
+          <Link to="/contact">{t("contact")}</Link>
           <Link to="/appointment">{t("bookAppointment")}</Link>
-          <Link to="/admin/login">{t("adminLogin")}</Link>
         </div>
       </div>
       <div className="footer-contact">
@@ -32,7 +32,10 @@ export default function Footer() {
         <span><MapPin size={16} /> {hospital.address}</span>
       </div>
       <div className="footer-copyright">
-        Copyright © 2026 <a href="https://alishbatech.com" target="_blank" rel="noreferrer">ALISHBATECH</a> . All Rights Reserved.
+        <span>© 2026. All Rights Reserved. | Designed & Developed by </span>
+        <a href="https://alishbatech.com" target="_blank" rel="noreferrer">
+          Alishbatech
+        </a>
       </div>
     </footer>
   );

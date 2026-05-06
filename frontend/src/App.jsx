@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer.jsx";
 import Navbar from "./components/Navbar.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 import About from "./pages/About.jsx";
 import AdminDashboard from "./pages/admin/AdminDashboard.jsx";
 import AdminLogin from "./pages/AdminLogin.jsx";
@@ -16,6 +17,7 @@ import Register from "./pages/Register.jsx";
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

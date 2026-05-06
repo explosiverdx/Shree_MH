@@ -67,7 +67,7 @@ Backend API: `http://localhost:5000/api`
 Set these in `backend\.env` before starting the backend:
 
 ```env
-ADMIN_NAME=SHREE Ortho & Multispeciality Hospital Admin
+ADMIN_NAME=SHREE CEO
 ADMIN_EMAIL=admin@hospital.com
 ADMIN_PASSWORD=Admin@12345
 ```

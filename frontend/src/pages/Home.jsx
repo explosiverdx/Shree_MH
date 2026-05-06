@@ -23,6 +23,7 @@ export default function Home() {
           <div className="hero-actions">
             <Link className="btn primary" to="/appointment">{t("bookAppointment")} <ArrowRight size={18} /></Link>
             <Link className="btn soft" to="/departments">{t("viewDepartments")}</Link>
+            <Link className="btn soft" to="/contact">{t("sendInquiry")}</Link>
           </div>
           <div className="hero-stats">
             <strong>120+<span>{t("doctorsStat")}</span></strong>

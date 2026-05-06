@@ -91,6 +91,14 @@ const departmentTranslations = {
     "Emergency & Trauma": {
       name: "Emergency & Trauma",
       description: "24/7 emergency response for fractures, accidents, pain, trauma, and urgent multispeciality support."
+    },
+    "Sports Injury": {
+      name: "Sports Injury",
+      description: "Care for ligament injuries, sprains, shoulder injuries, knee injuries, and sports rehabilitation."
+    },
+    "Physiotherapy & Rehabilitation": {
+      name: "Physiotherapy & Rehabilitation",
+      description: "Physiotherapy, mobility training, post-surgery recovery, and guided rehabilitation programs."
     }
   },
   HI: {
@@ -125,6 +133,14 @@ const departmentTranslations = {
     "Emergency & Trauma": {
       name: "इमरजेंसी और ट्रॉमा",
       description: "फ्रैक्चर, दुर्घटना, दर्द, चोट और तुरंत मल्टीस्पेशलिटी सहायता के लिए 24/7 आपातकालीन देखभाल।"
+    },
+    "Sports Injury": {
+      name: "खेल चोट",
+      description: "लिगामेंट चोट, मोच, कंधे की चोट, घुटने की चोट और खेल पुनर्वास की देखभाल।"
+    },
+    "Physiotherapy & Rehabilitation": {
+      name: "फिजियोथेरेपी और पुनर्वास",
+      description: "फिजियोथेरेपी, चलने-फिरने का प्रशिक्षण, ऑपरेशन के बाद रिकवरी और निर्देशित पुनर्वास कार्यक्रम।"
     }
   }
 };
@@ -137,9 +153,15 @@ const doctorTranslations = {
     "Orthopedics": "ऑर्थोपेडिक्स",
     "Joint Replacement": "जॉइंट रिप्लेसमेंट",
     "Spine Care": "रीढ़ की देखभाल",
+    "Emergency & Trauma": "इमरजेंसी और ट्रॉमा",
+    "Sports Injury": "खेल चोट",
+    "Physiotherapy & Rehabilitation": "फिजियोथेरेपी और पुनर्वास",
     "Senior Orthopedic Surgeon": "वरिष्ठ ऑर्थोपेडिक सर्जन",
     "Joint Replacement Specialist": "जॉइंट रिप्लेसमेंट विशेषज्ञ",
     "Spine and Trauma Consultant": "रीढ़ और ट्रॉमा सलाहकार",
+    "Emergency & Trauma Specialist": "इमरजेंसी और ट्रॉमा विशेषज्ञ",
+    "Sports Injury Specialist": "खेल चोट विशेषज्ञ",
+    "Physiotherapy and Rehabilitation Specialist": "फिजियोथेरेपी और पुनर्वास विशेषज्ञ",
     "Chief Cardiologist": "वरिष्ठ ऑर्थोपेडिक सर्जन",
     "Emergency Medicine Lead": "इमरजेंसी और ट्रॉमा विशेषज्ञ",
     "Senior Neurologist": "रीढ़ और ट्रॉमा सलाहकार"

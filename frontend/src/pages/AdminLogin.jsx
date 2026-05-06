@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ShieldCheck } from "lucide-react";
+import { hospital } from "../config/site.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useLanguage } from "../context/LanguageContext.jsx";
 
@@ -22,8 +24,17 @@ export default function AdminLogin() {
   return (
     <main className="auth-page admin-auth">
       <form className="auth-card" onSubmit={submit}>
-        <span className="eyebrow">{t("adminLogin")}</span>
-        <h1>{t("adminPanel")}</h1>
+        <div className="admin-login-brand">
+          <span className="admin-login-mark">
+            <ShieldCheck size={26} />
+          </span>
+          <div>
+            <span className="eyebrow">{t("adminLogin")}</span>
+            <h1>{t("adminPanel")}</h1>
+          </div>
+        </div>
+        <p>{hospital.name}</p>
+        <p className="auth-subtitle">{t("adminPanelText")}</p>
         <input name="email" type="email" placeholder={t("adminEmail")} required />
         <input name="password" type="password" placeholder={t("password")} required />
         <button className="btn primary" type="submit">{t("openDashboard")}</button>

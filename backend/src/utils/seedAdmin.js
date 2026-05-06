@@ -7,14 +7,21 @@ export default async function seedAdmin() {
   if (!email || !password) return;
 
   const existingAdmin = await User.findOne({ email });
-  if (existingAdmin) return;
+  if (existingAdmin) {
+    existingAdmin.name = process.env.ADMIN_NAME || "Hospital CEO";
+    existingAdmin.password = password;
+    existingAdmin.role = "admin";
+    await existingAdmin.save();
+    console.log(`CEO admin synced: ${email}`);
+    return;
+  }
 
   await User.create({
-    name: process.env.ADMIN_NAME || "Hospital Admin",
+    name: process.env.ADMIN_NAME || "Hospital CEO",
     email,
     password,
     role: "admin"
   });
 
-  console.log(`Default admin created: ${email}`);
+  console.log(`CEO admin created: ${email}`);
 }

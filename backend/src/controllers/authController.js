@@ -44,6 +44,11 @@ export async function login(req, res, next) {
       throw new Error("Invalid email or password.");
     }
 
+    if (user.role === "admin") {
+      res.status(403);
+      throw new Error("CEO account must use the private admin login.");
+    }
+
     res.json(userResponse(user));
   } catch (error) {
     next(error);
@@ -53,11 +58,12 @@ export async function login(req, res, next) {
 export async function adminLogin(req, res, next) {
   try {
     const { email, password } = req.body;
+    const ceoEmail = process.env.ADMIN_EMAIL?.toLowerCase();
     const user = await User.findOne({ email });
 
-    if (!user || user.role !== "admin" || !(await user.matchPassword(password))) {
+    if (!ceoEmail || !user || user.email !== ceoEmail || user.role !== "admin" || !(await user.matchPassword(password))) {
       res.status(401);
-      throw new Error("Invalid admin credentials.");
+      throw new Error("Invalid CEO credentials.");
     }
 
     res.json(userResponse(user));
